@@ -1,7 +1,7 @@
 {
   "name": "@react-libraries/use-local-event",
-  "description": "Simplify communication between React's child components",
-  "version": "1.0.0",
+  "description": "Handling events between components in React",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
@@ -15,6 +15,7 @@
     "react",
     "setstate",
     "uselocalstate",
+    "uselocalevent",
     "react-hooks",
     "typescript"
   ],
