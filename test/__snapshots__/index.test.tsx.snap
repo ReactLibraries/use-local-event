@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Group dispatch 1`] = `
+Object {
+  "value1": "100",
+  "value2": "500",
+}
+`;
