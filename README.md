@@ -78,6 +78,7 @@ Trigger an event
 ___
 
 ## Sample
+![image](https://user-images.githubusercontent.com/54426986/122672957-38896880-d209-11eb-8acd-5985f3965950.gif)
 
 ```tsx
 import React, { useState } from 'react';
