@@ -30,12 +30,17 @@ export const useLocalEventCreate = <T>() => {
  * @param {LocalEvent<T>} event
  * @param {LocalEvent<T>['callbacks'][0]} callback
  */
-export const useLocalEvent = <T>(event: LocalEvent<T>, callback: LocalEvent<T>['callbacks'][0]) => {
+export const useLocalEvent = <T>(
+  event: LocalEvent<T> | undefined,
+  callback: LocalEvent<T>['callbacks'][0]
+) => {
   useEffect(() => {
-    event.callbacks = [...event.callbacks, callback];
-    return () => {
-      event.callbacks = event.callbacks.filter((a) => a !== callback);
-    };
+    if (event) {
+      event.callbacks = [...event.callbacks, callback];
+      return () => {
+        event.callbacks = event.callbacks.filter((a) => a !== callback);
+      };
+    }
   }, [event, callback]);
 };
 

@@ -39,6 +39,11 @@ const Recv = ({ event }: { event: LocalEvent<Action> }) => {
     type === 'add_a' && group === 'a' && setValue((v) => v + payload);
     type === 'add_b' && group === 'b' && setValue((v) => v + payload);
   });
+  //Not executed
+  useLocalEvent<Action>(undefined, ({ type, payload }) => {
+    type === 'add_a' && group === 'a' && setValue((v) => v + payload);
+    type === 'add_b' && group === 'b' && setValue((v) => v + payload);
+  });
   return (
     <div>
       <form>
